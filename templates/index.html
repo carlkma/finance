@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Hello, {{username}}</h1>
+<br>
+    <h4 align="right"><a class="nav-link" href="/change">change your password</a></h4>
+<br>
+    <table class="table table-striped">
+            <tr>
+                <th>Stock</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Total Stock Value</th>
+            </tr>
+            <tr>
+                {% for i in count %}
+                <td>{{symbolinfo[i]}}
+                <td>{{sharesinfo[i]}}
+                <td>{{price[i]}}
+                <td>{{value_of_holding[i]}}
+            </tr>
+            {% endfor %}
+            <tr>
+              <td><b>Cash Balance:
+              <td style="color:red">{{balance}}
+              <td>
+              <td>
+            </tr>
+            <tr>
+              <td><b>Grand Total:
+              <td style="color:red">{{grand_total}}
+              <td>
+              <td>
+            </tr>  
+        </table>
+
+{% endblock %}

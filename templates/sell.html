@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <select class="form-control" id="symbol" name="symbol">
+                <option disabled selected value="">Stock</option>
+        </select>
+            <input autocomplete="off" class="form-control" name="shares" placeholder="Shares" type="text">
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+
+    <script>
+      let a = "{{symbolinfo}}".split(" ")
+      for (c=0;c<{{counter}};c++){
+        document.querySelector("#symbol").innerHTML += '<option value="'+a[c]+ '">'+a[c]+'</option>'
+      }
+      
+    </script>
+{% endblock %}
