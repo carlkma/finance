@@ -8,7 +8,8 @@ Features:
 * Update account balance in consideration of current stocks prices 
 
 ## Brief history
-finance was initiated in 2019 as part of the author's CS50 summer course at Harvard University. It is deployed on https://carl-finance.herokuapp.com/ but is no longer maintained as of August 2019.
+finance was initiated in 2019 as part of the author's CS50 summer course at Harvard University. It is deployed on https://carl-finance.herokuapp.com/.
+finance is open sourced since 2021 but is no longer maintained.
 ## License
 
 MIT License
